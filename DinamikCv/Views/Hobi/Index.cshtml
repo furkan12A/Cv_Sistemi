@@ -1,0 +1,22 @@
+﻿@using DinamikCv.Models.Entity
+@model List<TblHobilerim>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Hobi Düzenleme Sayfası</h2>
+<br />
+<form method="post">
+    @foreach (var x in Model)
+    {
+        <label>Hobi İsimleri</label>
+        <textarea rows="1" class="form-control" name="ACIKLAMA1">@x.ACIKLAMA1</textarea>
+        <label>Açıklama</label>
+        <textarea rows="5" class="form-control" name="ACIKLAMA2">@x.ACIKLAMA2</textarea>
+        <br />
+    }
+    <button class="btn btn-success">Güncelle</button>
+</form>
